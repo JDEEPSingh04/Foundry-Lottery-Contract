@@ -1,66 +1,13 @@
-## Foundry
+ Random Lottery Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+1. Users can pay to enter the lottery
+2. Using chainlink VRF for random numbers generated
 
-Foundry consists of:
+This is a contract written in foundry where you can enter a lottery game with a given entrance fee. Then after a certain conditions are met a winner will be decided on the basis of result prrovided by chainlink VRF.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+ChainLink VRF is a oracle network that allows us to interact with the external world in a decentralized way.
 
-## Documentation
+I have installed chainlink-brownie-contract to get the Chainlink VRF interface.
+devOpsTools is used for getting the most recently deployed contract.
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Refer to Makefile for further assistance.
